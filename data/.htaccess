@@ -1,0 +1,14 @@
+# Protect JSON data files from direct web access
+<FilesMatch "\.json$">
+  Require all denied
+</FilesMatch>
+
+# Protect backup folder
+<FilesMatch "\.backup">
+  Require all denied
+</FilesMatch>
+
+# Protect lock and attempt files
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
